@@ -11,3 +11,14 @@ from django.http import HttpResponse
 # Defining an endpoint
 def index(request):
     return HttpResponse("Hello World!")
+
+# about send your name
+
+def about(request):
+    return HttpResponse("Marlo")
+
+
+# Working on it
+
+def soon(request):
+    return HttpResponse("Not done! Go away!")

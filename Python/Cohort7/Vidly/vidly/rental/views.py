@@ -1,12 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Movie
 
 # Create your views here.
 # MVC python manage.py runserver
 
 # Defining an endpoint
 def index(request):
-    return render(request, 'index.html')
+    all_movies = Movie.objects.all() # read Movie table to a list
+    return render(request, 'index.html', { 'title': 'Moview Catalog', 'movies': all_movies })
 
 # about send your name
 
@@ -17,4 +19,4 @@ def about(request):
 # Working on it
 
 def soon(request):
-    return HttpResponse("Not done! Go away!")
+    return render(request, 'comingSoon.html')

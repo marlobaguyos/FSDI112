@@ -7,11 +7,20 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    {% block styles %}
+
+    {% endblock %}
+
 </head>
 <body>
     
     <!-- menu -->
-    <h1>Menu will be here</h1>
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1">
+            <a href="#"></a>
+            Vidly
+        </span>
+    </nav>
 
 
 
@@ -22,13 +31,21 @@
     </div>
 
     <!-- footer -->
-    <div>
-        Footer here...
-    </div>
+    <footer class="footer">
+        <div class="footer-copyright text-center py-3">&#169; 2019 Copyright:
+            <a href="#"> Vidly.com </a>
+        </div>
+    </footer>
+
 
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    {% block scripts %}
+
+    {% endblock %}
+
 </body>
 </html>

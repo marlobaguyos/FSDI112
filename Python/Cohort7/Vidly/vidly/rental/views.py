@@ -10,6 +10,9 @@ def index(request):
     all_movies = Movie.objects.all() # read Movie table to a list
     return render(request, 'index.html', { 'title': 'Moview Catalog', 'movies': all_movies })
 
+def catalog(request):
+    return render(request, 'catalog.html')
+
 # about send your name
 
 def about(request):

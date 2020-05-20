@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rental.apps.RentalConfig',
     'api.apps.ApiConfig',
-    #'rest.apps.Restconfig'
 ]
 
 MIDDLEWARE = [

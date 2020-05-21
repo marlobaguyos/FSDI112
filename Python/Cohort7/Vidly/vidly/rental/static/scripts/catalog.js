@@ -7,6 +7,7 @@ function loadData() {
         success: (res) => {
             console.log('From server', res);
 
+            catalog = res.objects;
             for(let i=0; i< res.objects.length; i++){
                 var movie = res.objects[i];
             }

@@ -10,5 +10,4 @@ urlpatterns = [
     path('user/login', views.soon, name='login'),
     path('order', views.soon, name='order'),
     path('movie/<int:movie_id>', views.details, name="details"),
-
 ]

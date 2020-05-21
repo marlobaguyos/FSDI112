@@ -7,6 +7,10 @@ function loadData() {
         type: 'GET',
         success: (res) => {
             console.log('From server', res);
+
+            for(let i=0; i< res.objects.length; i++){
+                var movie = res.objects[i];
+            }
         },
         error: (errorDetials) => {
             console.log(errorDetails);

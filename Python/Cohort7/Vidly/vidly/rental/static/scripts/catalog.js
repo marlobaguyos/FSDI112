@@ -1,4 +1,3 @@
-
 var catalog = [];
 
 function loadData() {
@@ -16,6 +15,19 @@ function loadData() {
             console.log(errorDetails);
         }
     });
+}
+
+function displayMovie(movie){
+    var tr = 
+    `<tr>
+        <td><img src='${movie.image}'></td>
+        <td>${movie.title}</td>
+        <td>${movie.release_year}</td>
+        <td>${movie.price}</td>
+        <td>${movie.in_stock}</td>
+    </tr>`
+
+    $(".catalog table tbody").append(tr);
 }
 
 function init(){

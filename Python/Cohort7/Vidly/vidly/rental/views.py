@@ -23,3 +23,6 @@ def about(request):
 
 def soon(request):
     return render(request, 'comingSoon.html')
+
+def details(request, movie_id):
+    return render(request, 'details.html')

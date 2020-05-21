@@ -10,6 +10,7 @@ function loadData() {
             catalog = res.objects;
             for(let i=0; i< res.objects.length; i++){
                 var movie = res.objects[i];
+                displayMovie(movie);
             }
         },
         error: (errorDetials) => {

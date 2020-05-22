@@ -12,7 +12,7 @@ def index(request):
 
 def details(request, movie_id):
     the_movie = Movie.objects.get(id=movie_id)
-    return render(request, 'details.html', {'movie': the_movie})
+    return render(request, 'details.html', {'test: o''movie': the_movie})
 
 def catalog(request):
     return render(request, 'catalog.html')

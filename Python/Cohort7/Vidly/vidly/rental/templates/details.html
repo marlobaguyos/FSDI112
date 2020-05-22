@@ -3,7 +3,7 @@
 {% block content %}
 <h2>Movie details</h2>
 
-<img src="/static/images/{% movie.image %}">
+<img src="Vidly/vidly/rental/static/images/{{ movie.image }}">
 
 <button class="btn btn-info">Add to cart</button>
 <button class="btn btn-info">Watch on Netflix</button>
@@ -11,7 +11,7 @@
 <button class="btn btn-info">Watch on iTunes</button>
 
 <div class="details">
-    Release Year: {% movie.release_year %}
+    Release Year: {{ movie.release_year }}
     ...
 </div>
 

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from .models import Movie
 
 # Create your views here.
@@ -11,8 +11,12 @@ def index(request):
     return render(request, 'index.html', { 'title': 'Moview Catalog', 'movies': all_movies })
 
 def details(request, movie_id):
-    the_movie = Movie.objects.get(id=movie_id)
-    return render(request, 'details.html', {'movie': the_movie})
+    try:
+        the_movie = Movie.objects.get(id=movie_id)
+        return render(request, 'details.html', {'movie': the_movie})
+    except:
+        raise Http404()
+
 
 def catalog(request):
     return render(request, 'catalog.html')

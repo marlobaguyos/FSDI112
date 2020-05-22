@@ -3,30 +3,51 @@
 {% block content %}
 
 {% block styles %}
-<link href="../static/styles/details.css" ref="stylesheet">
+<link rel="stylesheet" href="/static/styles/details.css">
 {% endblock %}
 
 <h2>{{ movie.title }}</h2>
+<hr>
 
-<div class="image" align="center">
-<img src="../static/images/{{ movie.image }}" width="300" align="center">
+<div class="container">
+    <div class="row">
+        <div class="image col-md-auto">
+        <img src="../static/images/{{ movie.image }}">
+        </div>
+
+        <div class="details col-3 font-weight-bold .text-monospace">
+            <p>Title: {{ movie.title }}</p>
+            <p>Release Year: {{ movie.release_year }}</p>
+            <p>Prise: {{movie.price}}</p>
+            <p>Stock: {{movie.in_stock}}</p>
+        </div>
+
+        <div class="actions col-md-auto">
+        <button class="btn btn-sm btn-info">Add to cart</button>
+        <button class="btn btn-sm btn-danger">Watch on Netflix</button>
+        <button class="btn btn-sm btn-success">Watch on Hulu</button>
+        <button class="btn btn-sm btn-dark">Watch on iTunes</button>
+        </div>
+    </div>  
 </div>
 
-<div class="details">
-    Release Year: {{ movie.release_year }}
-    ...
-</div>
-
-<div class="actions">
-<button class="btn btn-info">Add to cart</button>
-<button class="btn btn-info">Watch on Netflix</button>
-<button class="btn btn-info">Watch on Hulu</button>
-<button class="btn btn-info">Watch on iTunes</button>
-</div>
-
+<hr>
 <div class="synopsis">
 <h6>Synopsis</h6>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nesciunt libero laboriosam error dolorem, fuga facere iusto pariatur, sapiente sed ex quibusdam sit sunt earum vitae saepe magnam quae, quidem provident distinctio illo nam labore.</p>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nesciunt libero laboriosam error dolorem, fuga facere iusto pariatur, sapiente sed ex quibusdam sit sunt earum vitae saepe magnam quae, quidem provident distinctio illo nam labore.</p>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nesciunt libero laboriosam error dolorem, fuga facere iusto pariatur, sapiente sed ex quibusdam sit sunt earum vitae saepe magnam quae, quidem provident distinctio illo nam labore.</p>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nesciunt libero laboriosam error dolorem, fuga facere iusto pariatur, sapiente sed ex quibusdam sit sunt earum vitae saepe magnam quae, quidem provident distinctio illo nam labore.</p>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nesciunt libero laboriosam error dolorem, fuga facere iusto pariatur, sapiente sed ex quibusdam sit sunt earum vitae saepe magnam quae, quidem provident distinctio illo nam labore.</p>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nesciunt libero laboriosam error dolorem, fuga facere iusto pariatur, sapiente sed ex quibusdam sit sunt earum vitae saepe magnam quae, quidem provident distinctio illo nam labore.</p>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nesciunt libero laboriosam error dolorem, fuga facere iusto pariatur, sapiente sed ex quibusdam sit sunt earum vitae saepe magnam quae, quidem provident distinctio illo nam labore.</p>
 </div>
+
 
 {% endblock %}

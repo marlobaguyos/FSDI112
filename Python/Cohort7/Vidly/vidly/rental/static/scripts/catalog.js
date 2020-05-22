@@ -23,7 +23,7 @@ function displayMovie(movie){
     var tr = 
     `<tr>
         <td align='center'><img src='${movie.image}' width='120' </td>
-        <td><a href="/movie/%{movie.id}">${movie.title}</a></td>
+        <td><a href="/movie/${movie.id}">${movie.title}</a></td>
         <td align='right'>${movie.release_year}</td>
         <td align='right'>${movie.price}</td>
         <td align='right'>${movie.in_stock}</td>

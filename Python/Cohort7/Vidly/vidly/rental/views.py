@@ -10,6 +10,10 @@ def index(request):
     all_movies = Movie.objects.all() # read Movie table to a list
     return render(request, 'index.html', { 'title': 'Moview Catalog', 'movies': all_movies })
 
+def details(request, movie_id):
+    the_movie = Movie.objects.get(id=movie_id)
+    return render(request, 'details.html', {'movie': the_movie})
+
 def catalog(request):
     return render(request, 'catalog.html')
 
@@ -19,10 +23,6 @@ def about(request):
     return HttpResponse("Marlo")
 
 
-# Working on it
-
 def soon(request):
     return render(request, 'comingSoon.html')
 
-def details(request, movie_id):
-    return render(request, 'details.html')

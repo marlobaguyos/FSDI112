@@ -1,18 +1,27 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<h2>Movie details</h2>
 
-<img src="/static/images/{{ movie.image }}">
+{% block styles %}
+<link href="../static/styles/details.css" ref="stylesheet">
+{% endblock %}
 
-<button class="btn btn-info">Add to cart</button>
-<button class="btn btn-info">Watch on Netflix</button>
-<button class="btn btn-info">Watch on Hulu</button>
-<button class="btn btn-info">Watch on iTunes</button>
+<h2>{{ movie.title }}</h2>
+
+<div class="image" align="center">
+<img src="../static/images/{{ movie.image }}" width="300" align="center">
+</div>
 
 <div class="details">
     Release Year: {{ movie.release_year }}
     ...
+</div>
+
+<div class="actions">
+<button class="btn btn-info">Add to cart</button>
+<button class="btn btn-info">Watch on Netflix</button>
+<button class="btn btn-info">Watch on Hulu</button>
+<button class="btn btn-info">Watch on iTunes</button>
 </div>
 
 <div class="synopsis">
